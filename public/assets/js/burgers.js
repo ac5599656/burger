@@ -6,7 +6,7 @@ $(function () {
         let newDevourState = {
             devoured: newDevour
         };
-
+        //update data
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newDevourState
@@ -24,7 +24,7 @@ $(function () {
         let newBurger = {
             name: name,
             devoured: 0
-        }
+        } //check for valid input in order to post
         if (name) {
             $.ajax("/api/burgers", {
                 type: "POST",
