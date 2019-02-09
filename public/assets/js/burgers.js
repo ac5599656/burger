@@ -20,21 +20,34 @@ $(function () {
 
     $(".create-form").on("submit", function (event) {
         event.preventDefault();
-
+        const name = $("#bu").val().trim();
         let newBurger = {
-            name: $("#bu").val().trim(),
+            name: name,
             devoured: 0
         }
-
-        $.ajax("/api/burgers", {
-            type: "POST",
-            data: newBurger
-        }).then(
-            function () {
-                console.log("created new burger");
-                location.reload();
-            }
-        );
+        if (name) {
+            $.ajax("/api/burgers", {
+                type: "POST",
+                data: newBurger
+            }).then(
+                function () {
+                    console.log("created new burger");
+                    location.reload();
+                }
+            );
+        } else {
+            alert('Enter a burger name please');
+        }
+        // name ? ($.ajax("/api/burgers", {
+        //     type: "POST",
+        //     data: newBurger
+        // }).then(
+        //     function () {
+        //         console.log("created new burger");
+        //         location.reload();
+        //     }
+        // )) : alert('Enter a burger name please');
 
     });
+
 });
