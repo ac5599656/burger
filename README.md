@@ -12,7 +12,7 @@ Users can start by opening the server.js terminal and type node server.js. The a
 
 The following link is a live demo of the app: https://order-burger-app1.herokuapp.com/
 
-## More Info On FriendFinder-App
+## More Info On Burger-App
 
 This app is updated and maintained by the Github user ac5599656. If you have further questions, you can email
 ac5599656@gmail.com
